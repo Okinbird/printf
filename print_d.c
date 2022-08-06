@@ -1,17 +1,18 @@
 #include "main.h"
 
+
 /**
- * print_i - prints an integer
- * @i: integer to print
+ * print_d - prints a decimal
+ * @d: decimal to print
  *
  * Return: number of chars and digits printed
  */
-int print_i(va_list i)
+int print_d(va_list d)
 {
 int a[10];
 int j, m, n, sum, count;
 
-n = va_arg(i, int);
+n = va_arg(d, int);
 count = 0;
 m = 1000000000;
 a[0] = n / m;
@@ -40,17 +41,17 @@ return (count);
 }
 
 /**
- * print_d - prints a decimal
- * @d: decimal to print
+ * print_i - prints an integer
+ * @i: integer to print
  *
  * Return: number of chars and digits printed
  */
-int print_d(va_list d)
+int print_i(va_list i)
 {
 int a[10];
 int j, m, n, sum, count;
 
-n = va_arg(d, int);
+n = va_arg(i, int);
 count = 0;
 m = 1000000000;
 a[0] = n / m;
