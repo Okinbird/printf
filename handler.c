@@ -7,7 +7,7 @@
  *
  * Return: Total size of arguments with the total size of the base string
  */
-int hadler(cont char *str, va_list list)
+int hanler(const char *str, va_list list)
 {
   int size, i, aux;
   size = 0;
@@ -39,11 +39,11 @@ int percent_handler(const char *str, va_list list, int *i)
 {
   int size, j, number_formats;
   format formats[] = {
-		      {"c", print_c},
-		      {"s", print_s},
+		      {'c', print_c},
+		      {'s', print_s},
   };
   *i = *i + 1;
-  if (str[i] == '\0')
+  if (str[*i] == '\0')
     return (-1);
   if (str[*i] == '%')
     {
@@ -53,7 +53,7 @@ int percent_handler(const char *str, va_list list, int *i)
   number_formats = sizeof(formats) / sizeof(formats[0]);
   for (size = j = 0; j < number_formats; j++)
     {
-      if (str[*i] == format[j].type)
+      if (str[*i] == formats[j].type)
 	{
 	  size = formats[j].f(list);
 	  return (size);

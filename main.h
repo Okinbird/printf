@@ -6,20 +6,23 @@
 #include <stdarg.h>
 /**
  * struct print - Structure for printing various types
- * @t: The type to print
+ * @type: The type to print
  * @f: The function to print
  */
 typedef struct _format
 {
-char *t;
+char type;
 int (*f)(va_list);
 } format;
+
+int _strlen(const char *);
+int print(char *);
 
 int _putchar(char c);
 int buffer(char);
 
-int handler(cont char *, va_list);
-int percent_handler(cont char *, va_list, int *);
+int handler(const char *, va_list);
+int percent_handler(const char *, va_list, int *);
 
 int _printf(const char *format, ...);
 int print_c(va_list list);
