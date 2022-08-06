@@ -35,7 +35,7 @@ return (count);
 
 /**
  * hex_print - Prints a char's ascii value in uppercase hex
- *@c char to print
+ * @c: char to print
  *
  * Return: The number of chars printed (Always 2)
  */

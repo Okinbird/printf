@@ -63,7 +63,7 @@ if (n < 0)
 {
 _putchar('-');
 count++;
-for (j = 0; j < 10; j+=)
+for (j = 0; j < 10; j++)
 a[j] *= -1;
 }
 for (j = 0, sum = 0; j < 10; j++)
