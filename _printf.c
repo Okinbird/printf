@@ -21,6 +21,7 @@ print_t p[] = {
 {"x", print_x},
 {"X", print_X},
 {"S", print_S},
+{"p", print_p},
 {NULL, NULL}
 };
 for (i = 0; p[i].t != NULL; i++)
