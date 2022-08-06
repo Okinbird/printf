@@ -1,7 +1,4 @@
-#include <limits.h>
-#include <stdio.h>
 #include "main.h"
-
 
 /**
  * main - Entry point
@@ -10,6 +7,6 @@
  */
 int main(void)
 {
-  _printf("%b\n", 98);
+  _printf("%S\n", "Best\nSchool");
   return (0);
 }
