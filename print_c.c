@@ -7,7 +7,7 @@
  *
  * Return: Always 1
  */
-int print_c(va_list list)
+int print_c(va_list c)
 {
   char ch = (char)va_arg(c, int);
 

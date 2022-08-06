@@ -23,8 +23,9 @@ static int (*check_for_specifiers(const char *format))(va_list)
 	{
 	  break;
 	}
-      return (p[i].f);
     }
+      return (p[i].f);
+}
 
 /**
  * _printf - Prints anything
