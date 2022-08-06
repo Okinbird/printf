@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <stdarg.h>
 /**
- * struct_print - Structure for printing various types
+ * struct print - Structure for printing various types
  * @t: The type to print
  * @f: The function to print
  */
