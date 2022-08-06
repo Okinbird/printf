@@ -15,14 +15,8 @@ char *t;
 int (*f)(va_list);
 } print_t;
 
-int _strlen(const char *);
-int print(char *);
 
 int _putchar(char c);
-int buffer(char);
-
-int handler(const char *, va_list);
-int percent_handler(const char *, va_list, int *);
 
 int _printf(const char *format, ...);
 int print_c(va_list c);

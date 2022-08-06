@@ -23,7 +23,7 @@ int print_c(va_list c)
  */
 int print_s(va_list s)
 {
-  int count;
+  int count = 0;
   char *str = va_arg(s, char *);
 
   if (str == NULL)

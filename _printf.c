@@ -9,7 +9,7 @@
  */
 static int (*check_for_specifiers(const char *format))(va_list)
 {
-  unsigned int i;
+  unsigned int i = 0;
   print_t p[] = {
 		 {"c", print_c},
 		 {"s", print_s},
@@ -37,6 +37,7 @@ int _printf(const char *format, ...)
 {
   unsigned int i = 0, count = 0;
   va_list valist;
+  
   int (*f)(va_list);
 
   if (format == NULL)
