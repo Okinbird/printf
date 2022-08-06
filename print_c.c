@@ -3,7 +3,7 @@
 
 /**
  * print_c - Prints a char
- * @list: The char to print
+ * @c: The char to print
  *
  * Return: Always 1
  */
