@@ -157,7 +157,8 @@ return (value);
  *         Otherwise - NULL.
  */
 unsigned int (*handle_specifiers(const char *specifier))(va_list, buffer_t *,
-						      unsigned char, int, int, unsigned char)
+		unsigned char, int, int, unsigned char)
+
 {
 int i = 0;
 converter_t converters[] = {
