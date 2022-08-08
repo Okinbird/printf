@@ -31,6 +31,29 @@ int print_X(va_list X);
 int print_S(va_list S);
 int print_p(va_list p);
 
+
+/**
+ * struct flag_s - A new type defining a flags struct.
+ * @flag: A character representing a flag.
+ * @value: The integer value of the flag.
+ */
+typedef struct flag_s
+{
+  unsigned char flag;
+  unsigned char value;
+} flag_t;
+
+unsigned int convert_c(va_list args, buffer_t *output,
+		       unsigned char flags, int wid, int prec, unsigned char len);
+unsigned int convert_s(va_list args, buffer_t *output,
+		       unsigned char flags, int wid, int prec, unsigned char len);
+unsigned int convert_percent(va_list args, buffer_t *output,
+			     unsigned char flags, int wid, int prec, unsigned char len);
+
+
+
 unsigned char handle_flags(const char *flags, char *index);
+
+
 
 #endif
