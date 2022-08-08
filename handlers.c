@@ -149,7 +149,7 @@ return (value);
 }
 
 /**
- * h_specs - Matches a conversion specifier with
+ * handle_specifiers - Matches a conversion specifier with
  *                     a corresponding conversion function.
  * @spec: A pointer to a potential conversion specifier.
  *
