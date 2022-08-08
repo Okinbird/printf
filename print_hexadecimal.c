@@ -64,13 +64,13 @@ return (print_hex(va_arg(X, unsigned int), 1));
 
 
 
-/**************************************
+/**
  * _pow - calculates an exponent
  * @base: base of exponent
  * @exponent: exponent of number
  *
  * Return: base ^ exponent
- **************************************/
+ */
 static unsigned long _pow(unsigned int base, unsigned int exponent)
 {
 unsigned int i;
