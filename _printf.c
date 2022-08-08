@@ -23,6 +23,7 @@ print_t p[] = {
 {"X", print_X},
 {"S", print_S},
 {"p", print_p},
+{"r", print_r},
 {NULL, NULL}
 };
 for (i = 0; p[i].t != NULL; i++)
