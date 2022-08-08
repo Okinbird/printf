@@ -156,7 +156,7 @@ return (value);
  * Return: If a conversion function is matched - a pointer to the function.
  *         Otherwise - NULL.
  */
-unsigned int (*func)(va_list, buffer_t *, unsigned char, int, int, unsigned char)
+unsigned int (*handle_specifiers(const char *specifier))(va_list, buffer_t *, unsigned char, int, int, unsigned char)
 {
 int i = 0;
 converter_t converters[] = {
