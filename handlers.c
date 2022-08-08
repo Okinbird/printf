@@ -159,7 +159,7 @@ return (value);
 unsigned int (*handle_specifiers(const char *specifier))(va_list, buffer_t *,
 							 unsigned char, int, int, unsigned char)
 {
-int i = 0;
+int i;
 converter_t converters[] = {
 {"c", convert_c},
 {"s", convert_s},
@@ -175,7 +175,7 @@ converter_t converters[] = {
 {"p", convert_p},
 {"r", convert_r},
 {"R", convert_R},
-{NULL, NULL}
+{0, NULL}
 };
 
 for (i = 0; converters[i].func; i++)
