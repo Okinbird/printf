@@ -18,7 +18,6 @@ unsigned int convert_di(va_list args, buffer_t *output,
 long int d, copy;
 unsigned int ret = 0, count = 0;
 char pad, space = ' ', neg = '-', plus = '+';
-
 if (len == LONG)
 d = va_arg(args, long int);
 else
@@ -40,7 +39,7 @@ count += (d == 0) ? 1 : 0;
 count += (d < 0) ? 1 : 0;
 count += (PLUS_FLAG == 1 && d >= 0) ? 1 : 0;
 count += (SPACE_FLAG == 1 && d >= 0) ? 1 : 0;
-if (ZERO_FLAG == 1 && PLUS_FLAG == 1 && d >= 0) /* Handle plus flag when zero flag is active */
+if (ZERO_FLAG == 1 && PLUS_FLAG == 1 && d >= 0) /* Handle + flag when 0 flag is active */
 ret += _memcpy(output, &plus, 1);
 if (ZERO_FLAG == 1 && d < 0) /*Print negative sign when zero flag is active */
 ret += _memcpy(output, &neg, 1);
@@ -48,9 +47,9 @@ pad = (ZERO_FLAG == 1) ? '0' : ' ';
 for (wid -= count; wid > 0; wid--)
 ret += _memcpy(output, &pad, 1);
 }
-if (ZERO_FLAG == 0 && d < 0) /* Print negative sign when zero flag is not active */
+if (ZERO_FLAG == 0 && d < 0) /* Print - sign when 0 flag is not active */
 ret += _memcpy(output, &neg, 1);
-if (ZERO_FLAG == 0 && (PLUS_FLAG == 1 && d >= 0)) /* Handle plus flag when zero flag is not active */
+if (ZERO_FLAG == 0 && (PLUS_FLAG == 1 && d >= 0)) /* Handle + flag when 0 flag is not active */
 ret += _memcpy(output, &plus, 1);
 if (!(d == 0 && prec == 0))
 ret += convert_sbase(output, d, "0123456789", flags, 0, prec);
