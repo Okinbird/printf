@@ -32,6 +32,20 @@ int print_S(va_list S);
 int print_p(va_list p);
 
 
+
+/**
+ * struct buffer_s - A new type defining a buffer struct.
+ * @buffer: A pointer to a character array.
+ * @start: A pointer to the start of buffer.
+ * @len: The length of the string stored in buffer.
+ */
+typedef struct buffer_s
+{
+  char *buffer;
+  char *start;
+  unsigned int len;
+} buffer_t;
+
 /**
  * struct flag_s - A new type defining a flags struct.
  * @flag: A character representing a flag.
