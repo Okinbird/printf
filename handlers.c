@@ -152,15 +152,11 @@ return (value);
  * handle_specifiers - Matches a conversion specifier with
  *                     a corresponding conversion function.
  * @spec: A pointer to a potential conversion specifier.
- * @char:
- * @int:
- * @char:
  *
  * Return: If a conversion function is matched - a pointer to the function.
  *         Otherwise - NULL.
  */
-unsigned int (*handle_specifiers(const char *specifier))(va_list, buffer_t *,
-							 unsigned char, int, int, unsigned char)
+unsigned int (*handle_specifiers(const char *specifier))(va_list, buffer_t *, unsigned char, int, int, unsigned char)
 {
 int i;
 converter_t converters[] = {
