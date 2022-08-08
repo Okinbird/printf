@@ -175,7 +175,7 @@ converter_t converters[] = {
 {'p', convert_p},
 {'r', convert_r},
 {'R', convert_R},
-{0, NULL}
+{NULL, NULL}
 };
 
 for (i = 0; converters[i].func; i++)
