@@ -31,5 +31,6 @@ int print_X(va_list X);
 int print_S(va_list S);
 int print_p(va_list p);
 
+unsigned char handle_flags(const char *flags, char *index);
 
 #endif
