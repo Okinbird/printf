@@ -154,6 +154,7 @@ return (value);
  * @spec: A pointer to a potential conversion specifier.
  * @char:
  * @int:
+ * @char:
  *
  * Return: If a conversion function is matched - a pointer to the function.
  *         Otherwise - NULL.
