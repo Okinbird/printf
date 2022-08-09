@@ -30,9 +30,9 @@
  */
 typedef struct buffer_s
 {
-char *buffer;
-char *start;
-unsigned int len;
+  char *buffer;
+  char *start;
+  unsigned int len;
 } buffer_t;
 
 /**
@@ -42,8 +42,8 @@ unsigned int len;
  */
 typedef struct converter_s
 {
-unsigned char specifier;
-unsigned int (*func)(va_list, buffer_t *,
+  unsigned char specifier;
+  unsigned int (*func)(va_list, buffer_t *,
 		       unsigned char, int, int, unsigned char);
 } converter_t;
 
@@ -54,8 +54,8 @@ unsigned int (*func)(va_list, buffer_t *,
  */
 typedef struct flag_s
 {
-unsigned char flag;
-unsigned char value;
+  unsigned char flag;
+  unsigned char value;
 } flag_t;
 
 int _printf(const char *format, ...);
